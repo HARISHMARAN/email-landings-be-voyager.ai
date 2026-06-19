@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bevoyager.ai — Email Template Preview</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #0F1B2D;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            padding: 48px 24px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        header h1 {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        header h1 span.accent { color: #E8722A; }
+        header h1 span.white { color: #FFFFFF; }
+        header p {
+            color: #64748B;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #1A2A3F;
+            border: 1px solid #1E3352;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: transform 0.18s ease, box-shadow 0.18s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+        }
+        .card-thumb {
+            background: #0D2137;
+            height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 3px solid;
+            position: relative;
+            overflow: hidden;
+        }
+        .card-thumb::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(232,114,42,0.08) 0%, transparent 60%);
+        }
+        .card-thumb .icon {
+            font-size: 52px;
+            line-height: 1;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+        }
+        .card:nth-child(1) .card-thumb { border-color: #E8722A; }
+        .card:nth-child(2) .card-thumb { border-color: #34D399; }
+        .card:nth-child(3) .card-thumb { border-color: #60A5FA; }
+        .card-body { padding: 24px; }
+        .badge {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 3px 10px;
+            border-radius: 100px;
+            margin-bottom: 12px;
+        }
+        .card:nth-child(1) .badge { background: rgba(232,114,42,0.15); color: #E8722A; }
+        .card:nth-child(2) .badge { background: rgba(52,211,153,0.15); color: #34D399; }
+        .card:nth-child(3) .badge { background: rgba(96,165,250,0.15); color: #60A5FA; }
+        .card h2 {
+            color: #F1F5F9;
+            font-size: 17px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.2px;
+        }
+        .card p {
+            color: #64748B;
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .card a.btn {
+            display: block;
+            text-align: center;
+            padding: 11px 20px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: opacity 0.15s;
+        }
+        .card a.btn:hover { opacity: 0.85; }
+        .card:nth-child(1) a.btn { background: #E8722A; color: #fff; }
+        .card:nth-child(2) a.btn { background: #34D399; color: #0F1B2D; }
+        .card:nth-child(3) a.btn { background: #60A5FA; color: #0F1B2D; }
+        footer {
+            text-align: center;
+            margin-top: 52px;
+            color: #334155;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><span class="accent">Be</span><span class="white">voyager.ai</span></h1>
+        <p>Email Template Preview Server &nbsp;·&nbsp; localhost:8000</p>
+    </header>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="card-thumb" style="border-color: #E8722A;">
+                <span class="icon">✉️</span>
+            </div>
+            <div class="card-body">
+                <span class="badge">Transactional</span>
+                <h2>Welcome — Sign Up</h2>
+                <p>Sent when a new user creates an account. Introduces the product, highlights core features, and drives the first dashboard visit.</p>
+                <a href="01-welcome-signup.html" class="btn" target="_blank">Preview Template →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-thumb" style="border-color: #34D399;">
+                <span class="icon">🎟️</span>
+            </div>
+            <div class="card-body">
+                <span class="badge">Transactional</span>
+                <h2>Subscription Confirmed</h2>
+                <p>Sent on any paid plan activation. Shows plan name, price, renewal date, order ID, and a full breakdown of unlocked features.</p>
+                <a href="02-subscription-confirmed.html" class="btn" target="_blank">Preview Template →</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-thumb" style="border-color: #60A5FA;">
+                <span class="icon">🤝</span>
+            </div>
+            <div class="card-body">
+                <span class="badge">Outreach</span>
+                <h2>Executive Outreach</h2>
+                <p>CEO / CTO letterhead template for partnerships, investor introductions, press enquiries, and B2B pitches. Fully placeholder-driven.</p>
+                <a href="03-executive-outreach.html" class="btn" target="_blank">Preview Template →</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        &copy; 2026 Bevoyager.ai Limited &nbsp;·&nbsp; Incorporated in England &amp; Wales
+    </footer>
+</body>
+</html>
